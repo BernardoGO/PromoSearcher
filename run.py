@@ -14,7 +14,7 @@ def sendEmail(result):
     SMTP_SERVER = 'smtp.live.com'
     SMTP_PORT = 587
 
-    sender = '<email>@hotmail.com'
+    sender = '<email>@hotmail.com  '
     recipient = 'to@to.com'
     subject = 'Promocoes'
     body = result
