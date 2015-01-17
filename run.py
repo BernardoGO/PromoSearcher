@@ -4,7 +4,7 @@ import re
 import time
 import BeautifulSoup
 import smtplib
-import email
+import inemail
 import sites
 
 _PRINT_ALL_ = True
@@ -34,4 +34,4 @@ for x in xrange(0, len(hardmobPromos[0])):
             result += "<a href=\"" + hardmobPromos[2] + hardmobPromos[0][x]['href'] + "\">" + hardmobPromos[0][x].getText().encode('ascii', 'ignore') + " - " + hardmobPromos[1][x].getText() + "</a><br><br>"
 
 
-email.sendEmail(result)
+#inemail.sendEmail(result)

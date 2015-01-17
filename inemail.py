@@ -1,5 +1,6 @@
 __author__ = 'bernardo'
 
+
 import csv
 import mechanize
 import re
