@@ -13,32 +13,6 @@ _FIND_ = ["smartphone"]
 
 
 
-def hardmob():
-    ua = 'Mozilla/5.0 (X11; Linux x86_64; rv:18.0) Gecko/20100101 Firefox/18.0 (compatible;)'
-    browser = mechanize.Browser()
-    browser.set_handle_robots(False)
-
-    browser.addheaders = [('User-agent', 'Firefox')]
-    start = 0
-    continuar = True
-    links = []
-
-    browser.open("http://www.hardmob.com.br/promocoes/")
-    html = browser.response().get_data()
-    browser.open("http://www.hardmob.com.br/promocoes/index2.html")
-    html += browser.response().get_data()
-    browser.open("http://www.hardmob.com.br/promocoes/index3.html")
-    html += browser.response().get_data()
-    browser.open("http://www.hardmob.com.br/promocoes/index4.html")
-    html += browser.response().get_data()
-
-
-    #print html
-    soup = BeautifulSoup.BeautifulSoup(html)
-    divList = soup(attrs={'class': 'title'})
-    return [divList, '']
-
-
 
 
 
