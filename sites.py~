@@ -22,8 +22,6 @@ def promoBit():
     html += browser.response().get_data()
     browser.open("http://www.promobit.com.br/Offer/getPage/page/3")
     html += browser.response().get_data()
-    browser.open("http://www.promobit.com.br/Offer/getPage/page/4")
-    html += browser.response().get_data()
 
     html = html.replace("access_url small", "access_url").replace("access_url ", "access_url")
     #print html
