@@ -56,6 +56,6 @@ def hardmob():
 
 
     #print html
-    soup = BeautifulSoup.BeautifulSoup(html)
+    soup = BeautifulSoup.BeautifulSoup(unicode(html, errors='replace'))
     divList = soup(attrs={'class': 'title'})
     return [divList, '']

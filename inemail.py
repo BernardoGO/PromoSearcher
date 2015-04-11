@@ -12,8 +12,8 @@ def sendEmail(result):
     SMTP_SERVER = 'smtp.live.com'
     SMTP_PORT = 587
 
-    sender = '<email>@hotmail.com  '
-    recipient = 'to@to.com'
+    sender = '<user>@hotmail.com  '
+    recipient = '<address>@gmail.com'
     subject = 'Promocoes'
     body = result
 
@@ -31,7 +31,7 @@ def sendEmail(result):
     session.ehlo()
     session.starttls()
     session.ehlo
-    session.login(sender, "password")
+    session.login(sender, "<password>")
 
     session.sendmail(sender, recipient, headers + "\r\n\r\n" + body)
     session.quit()
